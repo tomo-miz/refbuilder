@@ -1,0 +1,17 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  table
+    th Title
+    th Author
+    th Publisher
+    th Year
+      each elem in reference
+        tr
+          td !{elem.title}
+          td !{elem.last_name}, !{elem.first_name}
+          td !{elem.publisher}
+          td !{elem.year}
