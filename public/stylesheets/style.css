@@ -1,38 +1,77 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
-a {
-  color: #00B7FF;
+/* The topbar menu */
+.topnav {
+    background-color: black;
+    overflow: hidden; 
 }
 
-/* The sidebar menu */
-.sidenav {
-    height: 100%; /* Full-height: remove this if you want "auto" height */
-    width: 160px; /* Set the width of the sidebar */
-    position: fixed; /* Fixed Sidebar (stay in place on scroll) */
-    z-index: 1; /* Stay on top */
-    top: 0; /* Stay at the top */
-    left: 0;
-    background-color: orange; 
-    overflow-x: hidden; /* Disable horizontal scroll */
-    padding-top: 20px;
-}
-
-.sidenav a {
-    padding: 6px 8px 6px 16px;
+.topnav a {
+    float: left;
+    text-align: center;
     text-decoration: none;
-    font-size: 10px;
-    color: #818181;
-    display: block;
+    padding: 14px 16px;
+    font-size: 17px;
+    color: white;
+}
+
+.topnav a:hover{
+    color: yellow;
 }
 
 .main {
-    margin-left: 160px;
+    margin: 20px;
     padding: 0px 10px;
 }
 
-table, th, td{
-    border: 1px solid black;
+#references { 
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
 }
+
+#references th, #references td, {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+#references tr:nth-child(even){ background-color: #f2f2f2;}
+
+#references tr:hover {background-color: #ddd;}
+
+#references th {
+    padding-left: 5px;
+    text-align: left; 
+    border-radius: 25px;
+    background-color: #4B4B4B;
+    color: white;
+}
+
+#references td {
+    padding-left: 5px;
+}
+
+a:link, a:visited {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

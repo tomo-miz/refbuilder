@@ -4,14 +4,10 @@ html
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
-    div.sidenav
-      ul
-        li
-          a(href='/catalog') Home
-        li
-          a(href='/catalog/create') Create reference
-        li
-          a(href='/catalog/build') Build page
+    div.topnav
+      a(href='/catalog') Home
+      a(href='/catalog/create') Create reference
+      a(href='/catalog/build') Build page
 
     div.main
         block content

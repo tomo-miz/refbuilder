@@ -6,7 +6,7 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
+var helmet = require('helmet');
 
 //require router for url
 var routes = require('./routes/routes');
@@ -14,6 +14,7 @@ var db = require('./public/javascripts/db.js');
 
 //initialize server
 var app = express();
+app.use(helmet());
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));

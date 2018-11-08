@@ -4,14 +4,14 @@ block content
   h1= title
   p Welcome to #{title}
 
-  table
+  table(id="references")
     th Title
     th Author
     th Publisher
-    th Year
+    th Date
       each elem in reference
         tr
           td !{elem.title}
-          td !{elem.last_name}, !{elem.first_name}
-          td !{elem.publisher}
-          td !{elem.year}
+          td !{elem.name}
+          td !{elem.pub_name}
+          td !{elem.date}

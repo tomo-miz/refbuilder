@@ -5,10 +5,10 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to the #{title}. Select the items and the style for your reference and click submit to create your reference page.
   
   form(action='/catalog/build', method='post')
-    table
+    table(id='references')
       th Include
       th Title
       th Author
@@ -18,13 +18,16 @@ block content
         tr
           td
             input(type="checkbox" id="checkbox" name="mycheckbox" 
-            value=`${[elem.last_name, 
-                    elem.first_name, 
-                    elem.year,
-                    elem.title,
-                    elem.publisher]}`)
+            value=`${[elem.name + ';',  
+                    elem.date + ';',
+                    elem.title + ';',
+                    elem.pub_name + ';',
+                    elem.journal + ';',
+                    elem.pages + ';',
+                    elem.city + ';',
+                    elem.type]}`)
           td !{elem.title}
-          td !{elem.last_name}, !{elem.first_name}
-          td !{elem.publisher}
-          td !{elem.year}
+          td !{elem.name}
+          td !{elem.pub_name}
+          td !{elem.date}
     button(type='submit' formmethod='post') Submit
